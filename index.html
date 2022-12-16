@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <div class="fundo">
+        <h1>Manassés Raimundo</h1>
+            <div class="calculador">
+                <h2>Calculador</h2>
+                    <p id="resultado"></p>
+                        <table>
+                            <tr>
+                                <td><button class="botao" onclick="limpar('C')">C</button></td>
+                                <td><button class="botao" onclick="apagar('<')">&lt;</button></td>
+                                <td><button class="botao" onclick="inserir('/')">/</button></td>
+                                <td><button class="botao" onclick="inserir('x')">X</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="botao" onclick="inserir('9')">9</button></td>
+                                <td><button class="botao" onclick="inserir('8')">8</button></td>
+                                <td><button class="botao" onclick="inserir('7')">7</button></td>
+                                <td><button class="botao" onclick="inserir('-')">-</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="botao" onclick="inserir('4')">4</button></td>
+                                <td><button class="botao" onclick="inserir('5')">5</button></td>
+                                <td><button class="botao" onclick="inserir('6')">6</button></td>
+                                <td><button class="botao" onclick="inserir('+')">+</button></td>
+                            </tr>
+                            <tr>
+                                <td><button class="botao" onclick="inserir('1')">1</button></td>
+                                <td><button class="botao" onclick="inserir('2')">2</button></td>
+                                <td><button class="botao" onclick="inserir('3')">3</button></td>
+                                <td rowspan="2"><button class="botao" style="height: 105px" onclick="resulver()">=</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button class="botao" style="width: 105px" onclick="inserir('0')">0</button></td>
+                                <td><button class="botao" onclick="inserir('.')">.</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            <script>
+                function inserir(num){
+                var numero = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML = numero + num;
+                }
+
+                function limpar(){
+                    document.getElementById('resultado').innerHTML = "";
+                }
+
+                function apagar(){
+                    var resultado = document.getElementById('resultado').innerHTML;
+                    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+                }
+
+                function resulver(){
+                    var resultado = document.getElementById('resultado').innerHTML;
+                    if(resultado){
+                        document.getElementById('resultado').innerHTML = eval(resultado);
+                    }
+                    else{
+                        document.getElementById('resultado').innerHTML = 'Nada...'
+                    }
+                }
+            </script>
+    </body>
+</html>

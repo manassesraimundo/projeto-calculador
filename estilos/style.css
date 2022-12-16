@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.fundo{
+    background: lightcyan url('../imagem/fundo-madeira.jpg') no-repeat;
+    color: #ffff;
+    background-position: center center;
+    text-align: center;
+    height: 100vh;
+}
+
+.calculador{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.814);
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.botao{
+    width: 50px;
+    height: 50px;
+    font-size: 1.7em;
+    margin: 1px;
+    cursor: pointer;
+    background-color: rgb(57, 63, 69);
+    color: white;
+}
+
+.botao:hover{
+    background-color: rgba(57, 63, 69, 0.475);
+}
+
+#resultado{
+    background-color: white;
+    color: black;
+    width: 215px;
+    height: 35px;
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+   
